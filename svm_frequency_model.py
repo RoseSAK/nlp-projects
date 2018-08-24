@@ -18,15 +18,9 @@ document_vector_dict = {}
 
 # Training data
 
-positive_examples = ['Alexander Juggins Profile.pdf',
-         'Alec Doran-Twyford Profile.pdf',
-         'Alistair Tooke Solirius profile.pdf',
-         'Alan Kilcline Profile .pdf',
-         ]
+positive_examples = [] # put positive examples here
 
-negative_examples = [ 'Andrew Johnnys - Solirius profile.pdf',
-         'Amerjit Gill Solirius profile.pdf',
-         ]
+negative_examples = [] # put negative examples here
 
 # Prepare labels matrix
 Y_matrix = np.zeros(shape=(len(positive_examples+negative_examples), 1))
@@ -59,7 +53,7 @@ Y = Y_matrix.ravel()
 word_list = f_matrix.frequency_matrix.index.values
 
 # Test data
-test_file = 'Andrew Cherry Profile.pdf'
+test_file = '' # test instances go here
 
 # Prepare test data
 test_vector = DocumentVector(test_file)
